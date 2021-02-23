@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="container" style="width: 600px">
+<fieldset>
+    <form action="/" method="POST">
+        <div class="box">
+            <p>How much time do you have?</p>
+            <select name="time">
+                <option value=30>30 Minutes</option>
+                <option value=45>45 Minutes</option>
+                <option value=60>60 Minutes</option>
+                <option value=90>90 Minutes</option>
+                <option value=120>120 Minutes +</option>
+            </select>
+
+            <p>Choose some Categories</p>
+            <select name="categories" multiple size=3 required>
+                    <option value="Any">Any</option>
+                    <option value="Pasta">Pasta</option>
+                    <option value="Noodles">Noodles</option>
+                    <option value="Rice">Rice</option>
+                    <option value="Soup">Soup</option>
+                    <option value="Pizza">Pizza</option>
+                    <option value="Chicken">Chicken</option>
+                    <option value="Beef">Beef</option>
+                    <option value="Pork">Pork</option>
+                    <option value="Salad">Salad</option>
+                    <option value="Seafood">Seafood</option>
+                </select>
+        </div>
+        <p> Enter the ingredients you would like, separated by a comma</p>
+        <input name="ingredients" type="text" class="ghost-input" placeholder="Enter ingredients" required>
+        <input type="submit" class="ghost-button" value="Get Recipes">
+    </form>
+</fieldset>
+    </div>
+{% endblock content %}

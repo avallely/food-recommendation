@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<fieldset>
+<div class="container" style="width: 900px">
+
+    <div class="title">
+        <h1>
+            Your Recommended Dishes
+        </h1>
+        <div class="line"></div>
+    </div>
+    <div class = "choices">
+        <p class = "details">Your choices: </p>
+        <p class = "details">Prep time: {{ choices.time }} </pclass = "details">
+        <p class = "details">Category: {{ choices.categories }} </p>
+        <p class = "details">Ingredients: {{ choices.ingredients }} </p>
+    </div>
+
+    {%  for dish in suggestions %}
+    <div class="dish">
+        <div class="dishimage">
+            <img class="dishimg" src={{ "static/Images/"  + dish.replace(" ", "_") + "/6.jpg" }}>
+        </div>
+        <div class="dishright">
+            <h3> {{ dish }}</h3>
+            <form action = "/recommendations" method = "POST", >
+                <input type="hidden" name= "name" value= "{{ dish }}" />
+                <input type="submit" class="btn" value="View Details">
+            </form>
+
+            <div class = "likebuttons">
+            <form  method = "POST">
+                <input type="hidden" name="recipe" value= "Pasta" />
+                <input type="submit" class="like" value="Like" formaction="/like">
+                <input type="submit" class="dislike" value="Dislike"  formaction="/dislike">
+            </form>
+
+        </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+</fieldset>
+
+
+
+{% endblock content %}

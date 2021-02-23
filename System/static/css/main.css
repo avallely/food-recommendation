@@ -1,0 +1,325 @@
+body {
+  margin: 0 auto;
+  font-family: Open Sans, Verdana;
+  background-color: #fffffC;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+p {
+  color: black;
+  font-size: 25px;
+}
+
+fieldset {
+  display: block;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-before: 0em;
+  -webkit-padding-start: 0em;
+  -webkit-padding-end: 0em;
+  -webkit-padding-after: 0em;
+  border: 0px;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  min-width: -webkit-min-content;
+  padding: 30px;
+}
+
+.ghost-input {
+  display: block;
+  font-weight: 300;
+  width: 100%;
+  font-size: 25px;
+  border: 5px;
+  outline: 5px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #4b545f;
+  background: #fffffc;
+  font-family: Open Sans, Verdana;
+  padding: 10px 15px;
+  margin: 30px 0px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.ghost-input:focus {
+  border: 1px solid #ddd;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+
+.ghost-button {
+  background-color: transparent;
+  border: 2px solid #ddd;
+  padding: 10px 30px;
+  width: 100%;
+  min-width: 350px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.ghost-button:hover {
+  border: 2px solid #515151;
+}
+
+/* CSS for Dropdown */
+
+
+.box select {
+  background-color: #ffffff;
+  color: black;
+  padding: 12px;
+  width: 250px;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+
+.box::before {
+  content: "\f13a";
+  font-family: Open Sans, Verdana;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 50%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.box:hover::before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.box select option {
+  padding: 10px;
+}
+
+.line {
+  width: 650px;
+  border-top: 5px solid #008ecc;
+  margin-bottom: 40px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for the Recipe page */
+
+.title {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 650px;
+  align-items: center;
+}
+
+.likes {
+  display: inline-block;
+  align-items: center;
+}
+
+img {
+  height: 150px;
+  width: 250px;
+  display: inline-block;
+  margin: 10px;
+}
+
+.recipe {
+  padding-bottom: 10px;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 75%;
+  margin-top: 20px;
+  text-align: center;
+
+}
+.recipeimages {
+  display: inline-block;
+}
+
+.recipeimages .recipeimage {
+  display: inline-block;
+  text-align: center;
+}
+
+.recipeimages .recipeimage img {
+  height: 200px;
+}
+
+.recipedetails {
+  display: block;
+}
+
+.nutrition {
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.nutrition .item {
+  width: 100px;
+  display: inline-block;
+  padding: 5px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1.5px;
+  border-radius: 50px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.nutrition .item .value {
+  display: block;
+  text-align: center;
+}
+
+.nutrition .item .label {
+  display: block;
+  text-align: center;
+}
+
+.viewrecipe{
+    vertical-align: bottom;
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid #ddd;
+    padding: 10px 30px;
+    width: 20%;
+    min-width: 150px;
+    height: 100px;
+    transition: all 0.1s ease-in-out;
+    font-size: 24px;
+    margin: 10px;
+}
+
+.viewrecipe:hover{
+  border: 2px solid #515151;
+}
+
+
+/*
+Styles for the Reccomendations page
+*/
+
+.dish {
+  align-items: center;
+  border-bottom: 2px solid gray;
+  border-right: 2px solid gray;
+  padding-bottom: 10px;
+  padding: 5px;
+  margin-right: auto;
+  display: block;
+  width: 900px;
+  margin-bottom: 20px;
+
+}
+
+.dish .dishimage {
+  display: inline-block;
+  width: 60%;
+  text-align: center;
+}
+
+.dish .dishimage .dishimg{
+  display: inline-block;
+  width: 60%;
+  height: 300px;
+}
+
+.dish .dishright {
+  display: inline-block;
+  width: 39%;
+  vertical-align: top;
+}
+
+.dish .dishright .likes {
+  vertical-align: top;
+  padding-bottom: 20px;
+}
+
+.dish .dishright .likebuttons{
+  margin-top: 20px;
+}
+
+.dish .dishright .like{
+  vertical-align: bottom;
+  display: inline-block;
+  background-color: #dcf8c6;
+  border: 2px solid #ddd;
+  padding: 10px 5px;
+  width: 45%;
+  height: 50px;
+  transition: all 0.1s ease-in-out;
+  font-size: 24px;
+}
+.dish .dishright .dislike{
+  vertical-align: bottom;
+  display: inline-block;
+  background-color: #fa867e;
+  border: 2px solid #ddd;
+  padding: 10px 5px;
+  width: 45%;
+  height: 50px;
+  transition: all 0.1s ease-in-out;
+  font-size: 24px;
+}
+
+.dish .dishright .btn{
+  vertical-align: bottom;
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid #ddd;
+  padding: 10px 5px;
+  width: 90%;
+  min-width: 150px;
+  height: 75px;
+  transition: all 0.1s ease-in-out;
+  font-size: 24px;
+}
+.dish .btn:hover {
+  border: 2px solid #515151;
+}
+
+.dish .like:hover {
+  border: 2px solid green;
+}
+.dish .dislike:hover {
+  border: 2px solid red;
+}
+
+.choices{
+  width: 20%;
+  border: 1px solid black;
+  text-align: center;
+  margin-left: 40%;
+  margin-bottom: 20px
+}
+
+.choices .details{
+  font-size: 18px;
+  margin: 1px
+}

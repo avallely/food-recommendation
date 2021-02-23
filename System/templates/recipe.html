@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="title">
+        <h1>
+            {{ recipe.name }}
+        </h1>
+        <div class="line"></div>
+    </div>
+    <div class="recipe">
+        <div class="recipeimages">
+            {%  for i in numbers %}
+            <div class=recipeimage>
+                <img src={{ "static/Images/"  + recipe.name.replace(" ", "_") + "/" + i + ".jpg" }}>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="recipedetails">
+            <form target = "_blank" action= {{ recipe.link }} >
+                <button type="submit" class = "viewrecipe">Go To Recipe</button>
+             </form>
+            <p>Category: {{ recipe.category }} </p>
+            <p>Prep time: {{ (recipe.preptime) }} mins</p>
+
+            <p>{{ recipe.description }} </p>
+
+            <div class="nutrition">
+                <div class="item">
+                    <div class="value">
+                        {{recipe.calories}}
+                    </div>
+                    <div class="label">
+                        Calories
+                    </div>
+
+                </div>
+                <div class="item">
+                    <div class="value">
+                        {{recipe.fat}} g
+                    </div>
+                    <div class="label">
+                        Fat
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="value">
+                        {{recipe.saturated}}g
+                    </div>
+                    <div class="label">
+                        Saturated
+                    </div>
+
+                </div>
+                <div class="item">
+                    <div class="value">
+                        {{recipe.carbs}}g
+                    </div>
+                    <div class="label">
+                        Carbohydrate
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="value">
+                        {{recipe.sugar}}g
+                    </div>
+                    <div class="label">
+                        Sugar
+                    </div>
+
+                </div>
+                <div class="item">
+                    <div class="value">
+                        {{recipe.protein}}g
+                    </div>
+                    <div class="label">
+                        Protein
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="value">
+                        {{recipe.salt}}g
+                    </div>
+                    <div class="label">
+                        Salt
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
